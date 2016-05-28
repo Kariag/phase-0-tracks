@@ -11,4 +11,7 @@ Version control is a system that allows you to branch out a project so muliple p
 A branch creates a file that is a duplicate of your master branch, so that you or other people can make modifications to your project and then merge them back into the master.
 
 * What is a commit? What makes a good commit message?
+
+A commit is a save point in Git. It also communicates what you have done on a project. A good commit message is a concise explanation of what you have done.
+
 * What is a merge conflict?
