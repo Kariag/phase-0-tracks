@@ -15,3 +15,5 @@ A branch creates a file that is a duplicate of your master branch, so that you o
 A commit is a save point in Git. It also communicates what you have done on a project. A good commit message is a concise explanation of what you have done.
 
 * What is a merge conflict?
+
+A merge conflict is when two branches have changed the same part of the same file and then try to merge back together.  Git does not know which one to use.
