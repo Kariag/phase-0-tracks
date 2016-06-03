@@ -16,7 +16,12 @@ _Concepts that were clarified_
 _Questions asked pair and guide_
 
 * What is git fetch and how is it different from git pull?
-* What is an mit license
+* What is an mit license?
+
+What still confuses me about git is the workflow. I need to keep practicing.
+
+My first experience of pairing in GPS was really good.  It was nice to work with someone and talk through what we were doing.  It was a good learning experience.  It was also nice to have someone right there to ask questions if needed.
+
 
 
 
