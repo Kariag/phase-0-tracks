@@ -13,3 +13,10 @@ _Concepts that were clarified_
 
 > git fetch - downloads objects and refs from another repository.
 
+_Questions asked pair and guide_
+
+* What is git fetch and how is it different from git pull?
+* What is an mit license
+
+
+
