@@ -5,5 +5,6 @@ section#contact-info {
 section#work-experience {
   background-color: #e9e5dc;
   border-radius: 25px;
-
+  padding: 20px;
+  margin: 10px;
 }
