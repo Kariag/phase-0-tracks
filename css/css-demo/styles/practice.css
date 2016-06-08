@@ -25,3 +25,7 @@ a:visited {
 a:hover {
     color: pink;
 }
+
+ol > li {
+    background-color: pink;
+}
