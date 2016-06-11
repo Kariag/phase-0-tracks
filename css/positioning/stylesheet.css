@@ -1,0 +1,33 @@
+.octopus-wrapper {
+  position: relative;
+  margin: 25%;
+}
+
+#octopus {
+  position: relative;
+  display: inline;
+  width: auto;
+  margin: 25%;
+  padding: 25%;
+  top: 200px;
+  z-index: -1;
+}
+
+#glasses {
+  position: relative;
+  display: inline;
+  width: auto;
+  margin: 28%;
+  padding: 25%;
+  top: 10px;
+  z-index: 0;
+}
+#hat{
+  position: relative;
+  display: inline;
+  width: auto;
+  margin: 25%;
+  padding: 25%;
+  top: -250px;
+  z-index: 1;
+}
