@@ -1,9 +1,6 @@
 =begin
 
-
-
 =end
-
 #puts "Please type a password: "
 #password = gets.chomp
 
@@ -63,3 +60,11 @@ encrypt("zed")
 decrypt("bcd")
 decrypt("afe")
 decrypt(encrypt("swordfish"))
+
+# OUR DRIVER CODE
+# ask user if they would like to encrypt or decrypt a password
+puts "Do you want to decrypt or encrypt a password?"
+answer = gets.chomp
+
+puts "Please type a password"
+password = gets.chomp
