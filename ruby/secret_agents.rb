@@ -4,10 +4,13 @@
 #puts "Please type a password: "
 #password = gets.chomp
 
-
+#OUR METHOD DECLARATIONS
+# encrypts password to move up a letter in the alphabet
 def encrypt(password)
+  #declare empty string in case there is a space in the password given
   encrypted_password = ""
   index = 0
+  #loop .....
   while index < password.length
     if (password[index] != " ") && (password[index] != "z")
       encrypted_password[index] = password[index].next
@@ -29,15 +32,15 @@ end
  find out where in the alphabet that is
  and make that spot in the decrypted password
  equal to one spot earlier in the alphabet
-
 encrypted_password[index]
 decrypted_password[index] = alphabet[alphabet.index(encrypted_password[index]) - 1]
-
 =end
 
+# Decrypt password to move down a letter in the alphabet
 def decrypt(encrypted_password)
-  alphabet = "abcdefghijklmnopqrstuvwxyz"
   #alphabet.index(encrypted_password[index])
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+ # declare empty string in case
   decrypted_password = ""
 
   index = 0
@@ -55,16 +58,25 @@ def decrypt(encrypted_password)
   p decrypted_password
 end
 
-encrypt("abc")
-encrypt("zed")
-decrypt("bcd")
-decrypt("afe")
-decrypt(encrypt("swordfish"))
+#encrypt("zed")
+#decrypt("bcd")
+#decrypt("afe")
+#decrypt(encrypt("swordfish"))
 
 # OUR DRIVER CODE
 # ask user if they would like to encrypt or decrypt a password
 puts "Do you want to decrypt or encrypt a password?"
-answer = gets.chomp
+method = gets.chomp
 
 puts "Please type a password"
-password = gets.chomp
+msg = gets.chomp
+#if user wants to decrypt run the decrypt method
+if method == "encrypt"
+  encrypt(password)
+#if user wants to encrypt run the encrypt method
+elsif method == "decrypt"
+   decrypt(encrypted_password)
+#if user did not type decrypt or encrypt say we didn't understand and exit
+else
+  "Sorry I did not understand that"
+end
