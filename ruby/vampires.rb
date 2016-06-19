@@ -1,10 +1,17 @@
 #Ask for name, age, and year born
 puts "How many employees will be processed today?"
 employees_processed = gets.chomp
-
+#while employess_processed > 0
+#loop == if?
+#employees_processed = employees_processed -1
+#end
 
 puts "What is your name?"
 name = gets.chomp
+if name = "Drake Cula" || "Tu Fang"
+  puts "Definitely a vampire"
+else puts "Results inconclusive"
+end
 
 puts "How old are you?"
 age = gets.chomp
