@@ -1,6 +1,3 @@
-=begin
-
-=end
 #puts "Please type a password: "
 #password = gets.chomp
 
@@ -10,7 +7,7 @@ def encrypt(password)
   #declare empty string in case there is a space in the password given
   encrypted_password = ""
   index = 0
-  #loop .....
+  #loop to encrypt password
   while index < password.length
     if (password[index] != " ") && (password[index] != "z")
       encrypted_password[index] = password[index].next
@@ -38,12 +35,12 @@ decrypted_password[index] = alphabet[alphabet.index(encrypted_password[index]) -
 
 # Decrypt password to move down a letter in the alphabet
 def decrypt(encrypted_password)
-  #alphabet.index(encrypted_password[index])
   alphabet = "abcdefghijklmnopqrstuvwxyz"
- # declare empty string in case
+ # declare empty string in case there is an empty space in the password
   decrypted_password = ""
 
   index = 0
+  # loop to decrypt password
   while index < encrypted_password.length
    if encrypted_password[index] != " "
      decrypted_password[index] = alphabet[alphabet.index(encrypted_password[index]) - 1]
@@ -72,11 +69,12 @@ puts "Please type a password"
 msg = gets.chomp
 #if user wants to decrypt run the decrypt method
 if method == "encrypt"
-  encrypt(password)
+  encrypt(msg)
 #if user wants to encrypt run the encrypt method
 elsif method == "decrypt"
-   decrypt(encrypted_password)
+   decrypt(msg)
 #if user did not type decrypt or encrypt say we didn't understand and exit
 else
   "Sorry I did not understand that"
 end
+exit
