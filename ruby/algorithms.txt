@@ -1,3 +1,5 @@
+# Robots using Elevators code
+
 =begin Go into a building
  Find the elevator by listening for a ding,
  looking for arrow buttons that light up when pushed and
@@ -16,3 +18,22 @@
  The doors will open.
  Exit the elevator by walking out of the open doors
  =end
+
+# Make a Cup of Tea code
+=begin
+Take tea kettle off of stove
+take lid off of kettle and fill with water
+put kettle back on the stove and turn the burner on high
+wait for water to boil
+kettle will start whistling when water is boiling
+turn the burner on the stove to low
+take tea bag out of container and place in mug
+pour water over tea bag until mug is full
+let the tea bag seep in the water for two to five minutes
+take tea bag out of water
+get a spoon from where utensils are
+open a jar of honey and scoop a spoonful into your tea with spoon
+stir honey into tea
+sip tea carefully it will be hot
+enjoy
+=end
