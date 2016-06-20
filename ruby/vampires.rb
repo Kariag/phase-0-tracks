@@ -8,6 +8,7 @@ employees_processed = gets.chomp
 
 puts "What is your name?"
 name = gets.chomp
+
 if name = "Drake Cula" || "Tu Fang"
   puts "Definitely a vampire"
 else puts "Results inconclusive"
@@ -15,20 +16,20 @@ end
 
 puts "How old are you?"
 age = gets.chomp
-if age = 36
-  persons_age == true
-else
-  persons_age == false
-end
 
 puts "What year were you born?"
 year_born = gets.chomp
 
+if now.year - year_born = age
+  age == true
+else
+  puts "Might be a vampire"
+end
 #Ask if they want garlic bread
 puts "Would you like to have garlic bread for lunch?(yes/no)"
-bread = gets.chomp
+garlic_bread = gets.chomp
 
-if bread = "yes"
+if garlic_bread = "yes"
   garlic_bread == true
 else
   garlic_bread == false
@@ -39,7 +40,7 @@ end
 puts "Would you like to enroll in our company's health insurance plan?(yes/no)"
 plan = gets.chomp
 
-if plan = "yes"
+if insurance_plan = "yes"
   insurance_plan == true
 else
   insurance_plan == false
