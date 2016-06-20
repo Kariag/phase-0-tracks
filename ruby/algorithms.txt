@@ -1,0 +1,18 @@
+=begin Go into a building
+ Find the elevator by listening for a ding,
+ looking for arrow buttons that light up when pushed and
+ seeing sliding doors that open.
+ press the up or the down arrow key decided by which floor
+ you want to go to and which floor you are on.
+ Press one of the arrow keys and wait for doors to open
+ Once door open walk inside of the elevator and turn around.
+ Locate the lighted keypad next to the door.
+ Press the number to the floor you have decided to go to.
+ The elevator will start to move up or down depending on
+ where you decided to go.
+ Once the elevator has started to move spin around 3 times and say
+ "I like elevators, they are fun to go on."
+ Wait until the elevator has stopped moving.
+ The doors will open.
+ Exit the elevator by walking out of the open doors
+ =end
