@@ -54,19 +54,19 @@ if insurance_plan = "yes"
 else
   insurance_plan == false
 end
-
+#Find out if they have any allergies
 puts "Please list all allergies, when finished type done so we know you are done"
 allergies = gets.chomp
 bad_allergy = sunshine
 
-	until allergies == done
-
-	if alleriges = bad_allergy
-		puts "Probably a vampire"
-	else
-		puts "do you have any other allergies?"
-	end
-	allergies = allergies + 1
+until allergies == "done"
+	puts "Do you have any other allergies, please type done when finished"
+	allergies = gets.chomp
+if alleriges = bad_allergy
+	puts "Probably a vampire"
+else
+	puts "do you have any other allergies?"
+end
 
 
 # Determine whether or not person is a vampire
@@ -75,6 +75,8 @@ if age && (garlic_bread || insurance_plan) == true
   puts "Probably not a vampire"
 elsif age && (garlic_bread || insurance_plan) == false
   puts "Probably a vampire"
+elsif age && (garlic_bread && insurance_plan) == false
+  puts "Almost certainly a vampire!"
 else
   puts "Results inconclusive"
 end
