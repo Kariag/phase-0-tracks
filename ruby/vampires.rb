@@ -1,38 +1,47 @@
-#Ask for name, age, and year born
-puts "How many employees will be processed today?"
-employees_processed = gets.chomp
-#while employess_processed > 0
-#loop == if?
-#employees_processed = employees_processed -1
-#end
+# How many surveys will be processed
 
+puts "How many employees will be processed today?"
+processed_today = gets.chomp
+# Make a loop that will continue to process new employees
+employees_processed = 0
+while employees_processed < 10
+#Ask what their name is
 puts "What is your name?"
 name = gets.chomp
+#If their name is
+bad_name = "Drake Cula"
+bad_name2 = "Tu Fang"
 
-if name = "Drake Cula" || "Tu Fang"
-  puts "Definitely a vampire"
-else puts "Results inconclusive"
+if name == "bad_name"
+  	puts "Definitely a vampire"
+elsif name == "bad_name2"
+  	puts "Definitely a vampire"
+else
+	puts "Results inconclusive"
 end
-
+#Ask how old
 puts "How old are you?"
-age = gets.chomp
-
+age = gets.chomp.to_i
+#Ask year born
 puts "What year were you born?"
-year_born = gets.chomp
+year_born = gets.chomp.to_i
+#If current year minus year born equals age then age is true
+current_year = 2016.to_i
 
-if now.year - year_born = age
-  age == true
+if age = current_year - year_born
+  age = true
 else
   puts "Might be a vampire"
 end
+
 #Ask if they want garlic bread
 puts "Would you like to have garlic bread for lunch?(yes/no)"
 garlic_bread = gets.chomp
 
 if garlic_bread = "yes"
-  garlic_bread == true
+  garlic_bread = true
 else
-  garlic_bread == false
+  garlic_bread = false
 end
 
 
@@ -46,12 +55,30 @@ else
   insurance_plan == false
 end
 
+puts "Please list all allergies, when finished type done so we know you are done"
+allergies = gets.chomp
+bad_allergy = sunshine
+
+	until allergies == done
+
+	if alleriges = bad_allergy
+		puts "Probably a vampire"
+	else
+		puts "do you have any other allergies?"
+	end
+	allergies = allergies + 1
+
+
 # Determine whether or not person is a vampire
 
-if persons_age && (garlic_bread || insurance_plan) == true
+if age && (garlic_bread || insurance_plan) == true
   puts "Probably not a vampire"
-elsif persons_age && (garlic_bread || insurance_plan) == false
+elsif age && (garlic_bread || insurance_plan) == false
   puts "Probably a vampire"
 else
   puts "Results inconclusive"
 end
+employees_processed = employees_processed - 1
+end
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+exit
