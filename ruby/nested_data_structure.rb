@@ -11,3 +11,10 @@ house = {
 	:bathroom => ['bath-tub', 'shower', 'shelves']
 	}
 p house
+
+# print dishwasher using index
+house[:kitchen][2]
+# Add shoe rack to main bedroom
+house[:bedroom_main].push('shoe_rack')
+# print shoe rack
+house[:bedroom_main][4]
