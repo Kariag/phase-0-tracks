@@ -1,7 +1,8 @@
 # pseudocode and write a program
 # enter the details of a given client:
 # the client's name, age, number of children,
-# decor theme, and so on you can choose your own
+# decor theme, and so on (you can choose your own as long as it's
+# a good mix of string, integer, and boolean data).
 # Prompt the designer/user for all of this information
 puts "What is your name?"
   name = 'Kari' #gets.chomp
