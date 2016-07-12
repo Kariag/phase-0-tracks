@@ -20,6 +20,9 @@
 
 class Santa
 
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+
 	def speak
 		puts "Ho,ho,ho! Haaaapppy holidays!"
 	end
@@ -48,26 +51,32 @@ class Santa
 		puts "Santa is #{@age} years old"
 	end
 
-	def get_mad_at(reindeer_name)
-	end
+	# def get_mad_at(reindeer_name)
+	# 	new_reindeer_ranking = []
+	# 	bad_reindeer = @reindeer_ranking.index
+	# 	bad_reindeer.map do |reindeer|
+	# 		bad_reindeer << reindeer.push
+	# end
 
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+	# def gender=(new_gender)
+	#  	@gender = new_gender
+	#  	puts "Santa is now #{@gender}"
+	# end
 
-	def age
-		@age
-	end
+	# def age
+	# 	@age
+	# end
 
-	def ethnicity
-		@ethnicity
-	end
+	# def ethnicity
+	# 	@ethnicity
+	# end
 end
 
 Mr_Clause = Santa.new("Male", "Japanese")
 Mr_Clause.speak
 Mr_Clause.eat_milk_and_cookies("snickerdoodle")
 Mr_Clause.attributes
+
 
 # santas = []
 # santas << Santa.new("agender", "black")
@@ -79,13 +88,22 @@ Mr_Clause.attributes
 # santas << Santa.new("N/A", "N/A")
 
 santas = []
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+	example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+	example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+	example_genders.length.times do |i|
+  	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
+
 #p santas
 Mr_Clause = Santa.new("female", "filipina")
 Mr_Clause.speak
 Mr_Clause.eat_milk_and_cookies("sugar")
 Mr_Clause.attributes
+Mr_Clause.celebrate_birthday
+#Mr_Clause.get_mad_at("Dancer")
+Mr_Clause.gender = "transgender"
+
+20.times do |new_santa|
+	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+	puts "This Santa is #{santas[new_santa].age} years old, and identifies as #{santas[new_santa].gender} and as #{santas[new_santa].ethnicity}."
+end
