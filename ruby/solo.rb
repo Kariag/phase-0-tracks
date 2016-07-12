@@ -1,17 +1,11 @@
-#Design a class representing a female Gymnast
-#Add 3 attributes using at least 2 data types whose
-#values will vary from instance to instance (age, height, leotard color)
-#Add 3 methods, at least one of which takes an argument
-#(swing on bars, balance on beam, dance on floor)
-
 class Gymnast
   attr_reader :height, :leotard
   attr_accessor :age
 
-  def initialize(age, height)
+  def initialize(age, height, leotard)
     @age = age
     @height = height
-    @leotard = ["red", "sparkles", "mesh sleeves"]
+    @leotard = leotard
   end
 
   def swing
@@ -25,40 +19,34 @@ class Gymnast
   def dance(moves)
     puts "I love my floor routine, it has really fun #{moves} in it"
   end
-
-  # def age=(new_age)
-  #   @age = new_age
-  # end
-  #
-  # def height
-  #   @height
-  # end
-  #
-  # def leotard
-  #   @leotard
-  # end
-
 end
 
-Maggie = Gymnast.new("18", "4'11")
-puts "Maggie is #{Maggie.age} years old and is #{Maggie.height} tall"
+Maggie = Gymnast.new("18", "4'11", 'Red')
+puts "Maggie is #{@age} years old and is #{@height} tall."
 Maggie.swing
 Maggie.flip("back tuck")
 Maggie.dance("hip hop")
 Maggie.age = "19"
-puts "Maggie had a birthday and is now #{Maggie.age} years old"
 
+loop do
 puts "How old is your gymnast?"
-  age = gets.chomp
-gymnast_arry = []
+	age = gets.chomp
 
-50.times do
-	gymnast_arry << sarah = Gymnast.new("athlete")
-	end
+puts "How tall is your gymnast?"
+	height = gets.chomp
 
-gymnast_arry.each do |n|
-	n.flip
-	n.jump(5)
-	n.gold_medal
-	end
-p gymnast_arry
+puts "What color leotard is your gymnast wearing?"
+	color = gets.chomp
+
+puts "do you want to add another gymnast? If no type done."
+	answer = gets.chomp
+
+if answer == 'done'
+	break
+end
+
+def add_gymnasts(age, height, color)
+	gymnast_arry = []
+	gymnast_arry << new_gymnast = Gymnast.new("#{age}", "#{height}", "#{color}")
+end
+p add_gymansts('age', 'height', 'color')
