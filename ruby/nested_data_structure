@@ -1,0 +1,2 @@
+# Intialize empty hash
+house = {}
