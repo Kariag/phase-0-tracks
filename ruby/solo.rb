@@ -5,6 +5,8 @@
 #(swing on bars, balance on beam, dance on floor)
 
 class Gymnast
+  attr_reader :height, :leotard
+  attr_accessor :age
 
   def initialize(age, height)
     @age = age
@@ -12,22 +14,36 @@ class Gymnast
     @leotard = ["red", "sparkles", "mesh sleeves"]
   end
 
-  def uneven_bars
+  def swing
     p "*giants*"
   end
 
-  def balance_beam(flip)
-    puts "my favorite thing to do on beam is #{flip}!"
+  def flip(skill)
+    puts "my favorite thing to do on beam is a #{skill}!"
   end
 
-  def floor_ex(dance)
-    puts "I love my floor routine, it has really fun #{dance} moves in it"
+  def dance(moves)
+    puts "I love my floor routine, it has really fun #{moves} in it"
   end
 
+  # def age=(new_age)
+  #   @age = new_age
+  # end
+  #
+  # def height
+  #   @height
+  # end
+  #
+  # def leotard
+  #   @leotard
+  # end
 
 end
 
 Maggie = Gymnast.new("18", "4'11")
-Maggie.uneven_bars
-Maggie.balance_beam("back tuck")
-Maggie.floor_ex("hip hop")
+puts "Maggie is #{Maggie.age} years old and is #{Maggie.height} tall"
+Maggie.swing
+Maggie.flip("back tuck")
+Maggie.dance("hip hop")
+Maggie.age = "19"
+puts "Maggie had a birthday and is now #{Maggie.age} years old"
