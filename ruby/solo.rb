@@ -9,8 +9,25 @@ class Gymnast
   def initialize(age, height)
     @age = age
     @height = height
-    @leotard_color = []
+    @leotard = ["red", "sparkles", "mesh sleeves"]
   end
+
+  def uneven_bars
+    p "*giants*"
+  end
+
+  def balance_beam(flip)
+    puts "my favorite thing to do on beam is #{flip}!"
+  end
+
+  def floor_ex(dance)
+    puts "I love my floor routine, it has really fun #{dance} moves in it"
+  end
+
+
 end
 
-Female_Gymnast = Gymnast.new("18", "4'11")
+Maggie = Gymnast.new("18", "4'11")
+Maggie.uneven_bars
+Maggie.balance_beam("back tuck")
+Maggie.floor_ex("hip hop")
