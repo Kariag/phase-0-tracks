@@ -8,17 +8,30 @@
 # ethnicity, which will be a string passed in on initialization
 # reindeer_ranking, an array of reindeer from most preferred to least preferred. This is not passed in on initialization; it simply gets a default value of ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 # age, which is not passed in on initialization and defaults to 0
+#Add some diverse initializations to your file as driver code
+# Add three attribute-changing methods to your Santa class:
+# celebrate_birthday should age Santa by one year.
+# get_mad_at can take a reindeer's name as an argument, and move that reindeer in last place in the reindeer rankings. Vixen knows what he did.
+# The @gender attribute should have a setter method that allows @gender to be reassigned from outside the class definition.
+# Add two "getter" methods as well:
+# The method age should simply return @age.
+# The method ethnicity should return @ethnicity.
+# Update your driver code to test your work.
 
 class Santa
+
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+
 	def speak
 		puts "Ho,ho,ho! Haaaapppy holidays!"
 	end
 
 	def eat_milk_and_cookies(type)
-		puts "That was a good #{type}!"
+		puts "That was a good #{type} cookie!"
 	end
 
-	def initialize(gender, ethnicity, reindeer_ranking, age)
+	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance...."
 		@gender = gender
 		@ethnicity = ethnicity
@@ -32,9 +45,65 @@ class Santa
 		puts "Santas favorite reindeer in order are #{@reindeer_ranking}"
 		puts "Santa is #{@age} years old"
 	end
+
+	def celebrate_birthday
+		@age += 1
+		puts "Santa is #{@age} years old"
+	end
+
+	# def get_mad_at(reindeer_name)
+	# 	new_reindeer_ranking = []
+	# 	bad_reindeer = @reindeer_ranking.index
+	# 	bad_reindeer.map do |reindeer|
+	# 		bad_reindeer << reindeer.push
+	# end
+
+	# def gender=(new_gender)
+	#  	@gender = new_gender
+	#  	puts "Santa is now #{@gender}"
+	# end
+
+	# def age
+	# 	@age
+	# end
+
+	# def ethnicity
+	# 	@ethnicity
+	# end
 end
 
-Mr_Clause = Santa.new("male", "japanese", "reindeer_ranking", "age")
+Mr_Clause = Santa.new("Male", "Japanese")
 Mr_Clause.speak
 Mr_Clause.eat_milk_and_cookies("snickerdoodle")
 Mr_Clause.attributes
+
+
+# santas = []
+# santas << Santa.new("agender", "black")
+# santas << Santa.new("female", "Latino")
+# santas << Santa.new("bigender", "white")
+# santas << Santa.new("male", "Japanese")
+# santas << Santa.new("female", "prefer not to say")
+# santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+# santas << Santa.new("N/A", "N/A")
+
+santas = []
+	example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+	example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+	example_genders.length.times do |i|
+  	santas << Santa.new(example_genders[i], example_ethnicities[i])
+end
+
+#p santas
+Mr_Clause = Santa.new("female", "filipina")
+Mr_Clause.speak
+Mr_Clause.eat_milk_and_cookies("sugar")
+Mr_Clause.attributes
+Mr_Clause.celebrate_birthday
+#Mr_Clause.get_mad_at("Dancer")
+Mr_Clause.gender = "transgender"
+
+20.times do |new_santa|
+	santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+	puts "This Santa is #{santas[new_santa].age} years old, and identifies as #{santas[new_santa].gender} and as #{santas[new_santa].ethnicity}."
+end
