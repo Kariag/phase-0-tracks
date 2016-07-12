@@ -47,3 +47,18 @@ Maggie.flip("back tuck")
 Maggie.dance("hip hop")
 Maggie.age = "19"
 puts "Maggie had a birthday and is now #{Maggie.age} years old"
+
+puts "How old is your gymnast?"
+  age = gets.chomp
+gymnast_arry = []
+
+50.times do
+	gymnast_arry << sarah = Gymnast.new("athlete")
+	end
+
+gymnast_arry.each do |n|
+	n.flip
+	n.jump(5)
+	n.gold_medal
+	end
+p gymnast_arry
